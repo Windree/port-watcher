@@ -1,0 +1,13 @@
+#autorun
+version: '3.3'
+services:
+  server:
+    restart: unless-stopped
+    build: ./image
+    environment:
+      - LISTEN=1
+      - ADDR=10.22.0.8
+      - PORT=80
+    ports:
+      - "1025:1"
+    
